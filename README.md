@@ -1,7 +1,5 @@
-# AF-Semanas2a4-devops
+# DEVOPS
 
-Atividade Somativa Semana 2 a 4
+Atividade Somativa
 
-Esse é um repositório exclusivo Exercicios
 
-Todo Conteudo desse repositório também servirá para Atividade Somativa 1 
