@@ -1,15 +1,16 @@
-name: Discord
+name: Discord Alerts
+
 on:
-  - push
+  push:
+    branches: [ main ]  # Aciona apenas no branch main
 
 jobs:
-  discord:
+  send-discord-alert:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Run Discord Webhook
-        uses: AlanaMunizzz/discord-commits@v1.6
+      - name: Notify Discord
+        uses: Sniddl/discord-commits@v1.6  # Usando action pública
         with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}  # Sintaxe correta
           template: "avatar-with-link"
           include-extras: true
